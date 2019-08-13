@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D88大数据--助力营销</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js"></script>
+</head>
+<body>
+    <div id="menu1">
+        <div class="logo">
+            <a href="login.html">
+                <img class="logo-img" src="./image/nav-bg.png" alt="logo_img" style="width: 124.5px;height: 55px;">
+            </a>
+        </div>
+        <div class="nav-info">
+            <div class="nav-info-menu">
+                <a><span>产品</span></a>
+            </div>
+            <div class="nav-info-menu">
+                <a><span>官方资讯</span></a>
+            </div>
+            <div class="nav-info-menu">
+                <a><span>品牌活动</span></a>
+            </div>
+            <div class="nav-info-menu">
+                <a><span>联系我们</span></a>
+            </div>
+            <a class="nav-info-menu" href="https://www.imd88.com/" target="_blank"><span>客户端</span></a>
+        </div>
+    </div>
+    <div id="app" class="body-container">
+        <div class="ump-bg">
+            <div id="ump" class="box-login">
+                <div class="border">
+                    <h2 class="title">登录</h2>
+                    <form id="login-form" name="login-form">
+                        <div id="login" class="login">
+                            <div calss="username">
+                                <input type="text" id="username" name="username" placeholder="【D88】 账号/手机号" required>
+                            </div>
+                            <div class="error-msg" id="mobile-err"><span></span></div>
+                            <div class="phonecode">
+                                <input type="text" id="phonecode" name="phonecode" placeholder=" 短信验证码" required>
+                                <div class="phonecode-small">
+                                    <a class="phonecode-a" href="javascript:;" onclick="sendSMSCode();">获取验证码</a>
+                                </div>
+                            </div>
+                            <div class="error-msg" id="phone-code-err"><span></span></div>
+                            <div id="login-submit">
+                                <input type="submit" name="submit-btn" id="fm-login-submit" value="登录"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <img class="bg" src="./image/timg1.jpg" alt="background-img"/>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <div class="footer">
+            <div class="footer-top">
+                <h2>
+                    <span class="tab-title">客户端</span>
+                    <span class="tab-title">关注我们</span>
+                </h2>
+                <ul>
+                    <li>
+                        <span class="tab-about-col">
+                            <i class="fa fa-android"></i>
+                            <span class="tab-about-img">苹果/安卓客户端
+                                <img src="./image/install.png">
+                            </span>
+                        </span>
+                        <span class="tab-about-col">
+                            <i class="fa fa-wechat"></i>
+                            <span class="tab-about-img">D88情报局
+                                <img src="./image/wechat_qr.jpg">
+                            </span>
+                        </span>
+                        <span class="tab-about-col">
+                            <i class="fa fa-weibo"></i>
+                            <span class="tab-about-img">章鱼family情报局
+                                <img src="./image/weibo_qr.png">
+                            </span>
+                        </span>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

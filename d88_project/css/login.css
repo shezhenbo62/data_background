@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-info{
+    position: absolute;
+    left: 30%;
+    top: 22px;
+    width: 60%;
+    height: auto;
+    padding: auto
+}
+
+.nav-info-menu{
+    display: inline-block;
+    *float: left;
+    vertical-align: top;
+    color: #515151;
+    padding: 0 2%;
+    cursor: pointer;
+    box-sizing: content-box;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#ump{
+    width: 382px;
+    height: 295px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 18%;
+    top: 240px;
+    *float: right;
+    border: 1px solid #ccc;
+}
+
+img.bg{
+    width: 100%;
+    min-height: 600px;
+}
+
+#menu1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.logo{
+    padding-top: 6px;
+    width: 124.5px;
+}
+
+.border{
+    position: absolute;
+    width: 84%;
+    height: 80%;
+    left: 8%;
+    top: 6%
+}
+
+#username{
+    width: 316.88px;
+    height: 34px;
+    margin: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.phonecode{
+    width: 320.88px;
+    line-height: 34px;
+    margin: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#fm-login-submit{
+    width: 320.88px;
+    height: 40px;
+    background-color: #008bea;
+    cursor: pointer;
+    border: #008bea;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width:768px) {
+    .nav-info{
+        display: none;
+    }
+    #ump{
+        position: absolute;
+        left: auto;
+        right: auto;
+        margin: 0 15%
+    }
+}
+
+.footer-wrap .footer .footer-top .tab-about-img img {
+    width: 90px;
+    margin-top: 3px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.tab-about-col,.tab-title{
+    display: inline-block;
+    width: 120px;
+}
+
+.tab-about-col{
+    font-size:12px
+}
+
+.tab-title{
+    font-size: 14px
+}
+
+.footer-top{
+    color: #555;
+    margin: 0 auto 3.2rem auto;
+    width: 370px
+}
+
+.phonecode-small{
+    border: 2px solid #E8E8E8;
+    background: #E8E8E8;
+    padding: 1px 0;
+    width: 35%;
+    text-align: center;
+    float: right;
+}
+
+#phonecode{
+    width: 60%;
+    height: 34px;
+}
+
+.phonecode-a{
+    text-decoration: none;
+    color: #008bea
+}
+
+.error-msg{
+    display: none;
+    font-size: 14px;
+    color: red;
+}

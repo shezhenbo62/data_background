@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D88大数据 - 助力营销</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 60%; height: 40%;"></div>
+<script type="text/javascript">
+    // 图表的配置
+    var options={
+        chart:{
+            type:'spline'
+        },
+        title:{
+            text:'我的第一个图表'
+        },
+        subtitle:{
+            text:'数据来源：D88大数据'
+        },
+        xAxis:{
+            title:{
+                text:'水果分类'
+            },
+            categories:['苹果','香蕉','橙子']
+        },
+        yAxis:{
+            labels:{
+                // 刻度显示
+                enabled:true,
+                //自定义显示刻度
+                formatter:function(){
+                    return this.value+"个";
+                },
+                step:1,
+            },
+            title:{
+                text:'吃水果的个数'
+            }
+        },
+
+        // 设置数据
+        series:[
+            {
+            name:'小明',
+            data:[1,0,4]
+        },{
+            name:'小红',
+            data:[5,7,3]
+        }
+    ]
+    };
+    // 图表初始化的函数
+    // var chart=Highcharts.chart("container",options);
+    $('#container').highcharts(options)
+</script>
+</body>
+</html>

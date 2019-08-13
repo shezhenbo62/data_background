@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>D88大数据 AI版 - 智慧分析平台</title>
+        <link rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./js/highcharts.js"></script>
+        <script src="./js/series-label.js"></script>
+        <script type="text/javascript" src="./js/exporting.js"></script>
+        <script type="text/javascript" src="./js/export-data.js"></script>
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+        <script src="https://webapi.amap.com/maps?v=1.4.14&key=df5ae915e0a484bc5e5ad970772f6b78"></script>
+        <script src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script src="./js/localLoad.js"></script>
+    </head>
+    <body>
+        <div class="main-content">
+            <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+                <aside class="sidebar-left">
+                    <nav class="navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <a href="index.html">
+                                <img class="logo-img" src="./image/nav-bg.png" alt="logo_img">
+                            </a>
+                        </div>
+                        <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="sidebar-menu">
+                                <li class="treeview">
+                                    <a href="index.html">
+                                        <i class="fa fa-bar-chart"></i>
+                                        <span>店铺基础数据</span>
+                                    </a>
+                                </li>
+                                <li class="treeview" data-id="top">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-signal"></i>
+                                        <span>TOP排行</span>
+                                    </a>
+                                </li>
+                                <li class="treeview" data-id="position">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>用户位置分布</span>
+                                    </a>
+                                </li>
+                                <li class="treeview" data-id="usertime">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-hourglass-start"></i>
+                                        <span>用户时间段活跃图</span>
+                                    </a>
+                                </li>
+                                <li class="treeview" data-id="intersection">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-pie-chart"></i>
+                                        <span>交集用户分析</span>
+                                    </a>
+                                </li>
+                                <li class="treeview">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-diamond"></i>
+                                        <span>增值服务</span>
+                                        <div class="menu-arrow-down"><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></div>
+                                        <div class="menu-arrow-up"><i class="fa fa-angle-up fa-lg"></i></div>
+                                    </a>
+                                    <ul class="small-menu">
+                                        <li class="treeview-two">
+                                            <a href="javascript:;">
+                                                <span>智能推送服务</span>
+                                            </a>
+                                        </li>
+                                        <li class="treeview-two">
+                                            <a href="javascript:;">
+                                                <span>活动预测性分析</span>
+                                            </a>
+                                        </li>
+                                        <li class="treeview-two">
+                                            <a href="javascript:;">
+                                                <span>新店选址模型</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+            </div>
+            <div><button id="showLeftPush"><i class="fa fa-bars"></i></button></div>
+            <div class="sticky-header header-section ">
+                <div class="header-right">
+                    <div class="profile_details">
+                        <ul>
+                            <li class="dropdown profile_details_drop">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <div class="profile_img">
+                                        <span class="prfil-img">
+                                            <img src="image/brand_logo.png" alt="head" style="width: 55px;height: 55px;">
+                                        </span>
+                                        <div class="user-name">
+                                            <p>佘振波</p>
+                                            <span>管理员</span>
+                                        </div>
+                                        <span class="arrow-down"><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></span>
+                                        <span class="arrow-up"><i class="fa fa-angle-up fa-lg"></i></span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#"><i class="fa fa-cog"></i> 个人设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="./login.html"><i class="fa fa-sign-out"></i> 退出</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="page-wrapper" style="min-height: 410px;">
+                <!-- 图表页面 -->
+                <div class="main-page">
+                    <!-- 时间段内浏览数据图 -->
+                    <div class="time-browse" id="time-browse"></div>
+                    <!-- 活动浏览量、转发量等数据统计 -->
+                    <div class="charts" id="charts"></div>
+                    <!-- 关注量数据图 -->
+                    <div class="attention" id="attention"></div>
+                </div>
+            </div>
+            <div id="content"></div>
+            <!-- 底部网页信息声明栏 -->
+            <div class="footer"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器所占的百分比</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script src="../d88_project/js/series-label.js"></script>
+    <script type="text/javascript" src="../d88_project/js/exporting.js"></script>
+    <script type="text/javascript" src="../d88_project/js/export-data.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 50%;height: 50%;"></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#container").highcharts({
+                credits:{
+                    enabled:false
+                },
+                chart:{
+                    type:"pie",
+                },
+                title:{
+                    text:"2018年某网站浏览器浏览占比"
+                },
+                series:[{
+                    name:"浏览器访问量的占比",
+                    data:[
+                        ["FireFox",35],
+                        ["IE",20],
+                        ["Chrome",15],
+                        ["Safari",8.5],
+                        ["Opera",10],
+                        ["其他",11.5]
+                    ]
+                }]
+            })
+        })
+    </script>
+</body>
+</html>
